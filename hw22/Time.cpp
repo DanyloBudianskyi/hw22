@@ -134,12 +134,12 @@ void Time_::untickTime()
 void Time_::showTime() const
 {
     if (format == true) {
-        cout << "Time(24-hour format): " << hour << ":" << minutes << ":" << seconds << endl << endl;
+        cout << hour << ":" << minutes << ":" << seconds;
     }
     else {
         int hourCheck = hour % 12;
         if (hourCheck == 0) hourCheck = 12;
-        cout << "Time(12-hour format): " << hourCheck << ":" << minutes << ":" << seconds << (hour < 12 ? " AM" : " PM") << endl << endl;
+        cout << hourCheck << ":" << minutes << ":" << seconds << (hour < 12 ? " AM" : " PM");
     }
 }
 
