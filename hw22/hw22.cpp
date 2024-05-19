@@ -1,4 +1,5 @@
 #include "Time.h"
+#include "Bus.h"
 
 int main()
 {
@@ -29,10 +30,12 @@ int main()
 	//delete[] finishLessons;
 
 	//------------------------------------------------------------------------
-	Time_ a;
-	cin >> a;
-	for (int i = 0; i < 60; i++) {
-		a++;
-	}
-	cout << a;
+
+	Time_ startTime(6, 0, 0);
+	Time_ finishTime(11, 0, 0);
+	float roadTime = 30;
+	float restTime = 10;
+
+	Bus bus(startTime, finishTime, roadTime, restTime);
+	bus.showSchedule();
 }
